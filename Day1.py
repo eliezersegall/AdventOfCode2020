@@ -7,14 +7,14 @@ output: the sum of the biggest block
 """
 
 def part1():
-    with open("Day1A.txt", "r") as f:
+    with open("Day1Input.txt", "r") as f:
         # we read and evaluates the file's content into a list
         # each block of numbers is stored in a different sub list
         blocks = [[eval(num) for num in block.split("\n")] for block in f.read().split("\n\n")]
     print(max([sum(block) for block in blocks]))
 
 def part2():
-    with open("Day1A.txt", "r") as f:
+    with open("Day1Input.txt", "r") as f:
         # we read and evaluates the file's content into a list
         # each block of numbers' sum is stored into the list which is then sorted
         blocks = sorted([sum([eval(num) for num in block.split("\n")]) for block in f.read().split("\n\n")])
