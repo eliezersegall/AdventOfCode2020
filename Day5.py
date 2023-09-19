@@ -1,5 +1,5 @@
 """
-Day 5 of the Advent of Code 2020
+Day 5 of the Advent of Code 2022
 
 input: a file that has 2 parts.
 On the first part there's a diagram of several piles (columns) of crates
@@ -11,7 +11,12 @@ where:  x - how many crates to move
         y - the number of the pile we move the crates from.
         z - the number of the pile we move the crates to.
 note that when moving several crates, it means they are moved 1 by 1 and not as a block!
-for example: given the next diagram and instruction:
+
+part 1:
+we need to find out how the piles look after all instructions have been made
+output: a string made of all the top crates' letters.
+
+example: given the next diagram and instruction:
 [D]
 [N] [C]
 [Z] [M] [P]
@@ -26,14 +31,13 @@ The final result will be:
 [Z] [M] [P]
  1   2   3
 
-part 1:
-we need to find out how the piles look after all instructions have been made
-output: a string made of all the top crates' letters.
 
 part 2:
 A minor change, when moving several crates, it means they are moved as a block!
 meaning they stay in the same order
-for example: given the next diagram and instruction:
+output: a string made of all the top crates' letters based of course, on the new change
+
+example: given the next diagram and instruction:
 [D]
 [N] [C]
 [Z] [M] [P]
@@ -47,7 +51,6 @@ The final result will be:
     [C] [N]
 [Z] [M] [P]
  1   2   3
-output: a string made of all the top crates' letters based of course, on the new change
 """
 import re
 from functools import reduce

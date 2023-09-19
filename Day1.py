@@ -1,12 +1,44 @@
 """
-Day 1 of the Advent of Code 2020
+Day 1 of the Advent of Code 2022
 
 part 1:
 input: file with blocks of lines, each contains 1 number, separated by a blank line
 output: the sum of the biggest block
 
+example: consider the following file:
+1000
+2000
+3000
+
+4000
+
+5000
+6000
+
+7000
+8000
+9000
+
+10000
+
+This list represents 5 blocks:
+
+The first block is 1000, 2000, and 3000, a total of 6000.
+The second block is 4000.
+The third block is 5000 and 6000, a total of 11000.
+The fourth block is 7000, 8000, and 9000, a total of 24000.
+The fifth Elf is block is 10000.
+In that case the sum of the biggest block is 24000 (fourth block)
+
 part 2:
 output: the sum of the top 3 biggest blocks
+
+example:
+considering the example from part 1, the 3 biggest blocks are:
+The fourth block with a total of 24000
+the third block with a total of 11000
+the fifth block with a total of 10000
+which means the sum is 45000
 """
 
 

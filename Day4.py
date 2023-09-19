@@ -1,12 +1,35 @@
 """
-Day 4 of the Advent of Code 2020
+Day 4 of the Advent of Code 2022
 
 part 1:
 input: a file where each line contains 2 ranges of numbers.
 output: the number of lines where 1 range is completely contained by the other
 
+example: consider the following list of range pairs:
+
+2-4,6-8
+2-3,4-5
+5-7,7-9
+2-8,3-7
+6-6,4-6
+2-6,4-8
+
+in this example, 2-8 fully contains 3-7, and 6-6 is fully contained by 4-6.
+Meaning, there are 2 lines that fulfill the requirements
+
 part 2:
 output: the number of lines where the ranges overlap
+
+example: considering the example in part 1:
+
+the first two pairs (2-4,6-8 and 2-3,4-5) don't overlap,
+while the remaining four pairs (5-7,7-9, 2-8,3-7, 6-6,4-6, and 2-6,4-8) do overlap:
+
+5-7,7-9 overlaps in a single number, 7.
+2-8,3-7 overlaps all numbers from 3 through 7.
+6-6,4-6 overlaps in a single number, 6.
+2-6,4-8 overlaps in numbers 4, 5, and 6.
+So, in this example, the number of lines with overlapping range pairs is 4.
 """
 
 

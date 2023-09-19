@@ -1,5 +1,5 @@
 """
-Day 2 of the Advent of Code 2020
+Day 2 of the Advent of Code 2022
 
 part 1:
 input: lines of the format 'a b' where a ∈ {'A', 'B', 'C'}, b ∈ {'X', 'Y', 'Z'}
@@ -7,11 +7,26 @@ each letter stands for either rock, paper or scissors.
 'A' and 'X' stands for rock,
 'B' and 'Y' stands for paper,
 'C' and 'Z' stands for scissors.
-each line shows a match of rock-paper-scissors. our job is to calculate the points of the RIGHT player (b).
+each line shows a match of rock-paper-scissors. our job is to calculate the points of the RIGHT player (b column).
 Scoring rules:
 choosing rock grants 1 point. Paper is worth 2 points, and scissors are 3 points worth.
 Winning grants 6 points. A draw grants 3 points and losing grants 0 points.
 output: The right player's final score after all matches.
+
+example: consider the following file:
+A Y
+B X
+C Z
+This strategy guide predicts and recommends the following:
+
+In the first round, left player chose Rock (A), and right player chose Paper (Y).
+This ended in a win with a score of 8 (2 because right player chose Paper + 6 because right player won).
+In the second round, left player chose Paper (B), and right player chose Rock (X).
+This ended in a loss for right player with a score of 1 (1 + 0).
+The third round is a draw with both players choosing Scissors, giving right player a score of 3 + 3 = 6.
+In this example, right player got a total score of 15 (8 + 1 + 6).
+
+
 
 part 2:
 the input is the same as part 1 but the meaning of the letter b is different.
@@ -20,6 +35,14 @@ the input is the same as part 1 but the meaning of the letter b is different.
 'Z' means that player b won the match.
 Scoring rules are the same as part 1.
 output: The right player's final score after all matches.
+
+example: considering the same file from part 1's example:
+In the first round, left player chose Rock (A), and round has ended in a draw (Y), so right player also chose Rock.
+This gives right player a score of 1 + 3 = 4.
+In the second round, left player chose Paper (B), and right player lost (X), which means right player chose Rock,
+ending with a score of 1 + 0 = 1.
+In the third round, right player defeated left player's Scissors with Rock for a score of 1 + 6 = 7.
+Meaning right player got a total score of 12.
 """
 
 
